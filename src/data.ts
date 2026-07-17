@@ -2,6 +2,8 @@ import {
   Home,
   CreditCard,
   LayoutDashboard,
+  HelpCircle,
+  ShieldAlert,
   BookOpen,
   Target,
   LineChart,
@@ -273,6 +275,8 @@ export const navLinks: NavItem[] = [
   { label: 'Partners', to: '/partners', icon: Handshake },
   { label: 'Pricing', to: '/pricing', icon: CreditCard },
   { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard },
+  { label: 'FAQ', to: '/faq', icon: HelpCircle },
+  { label: 'Legal', to: '/legal', icon: ShieldAlert },
 ];
 
 export const bottomTabs: NavItem[] = [
@@ -360,3 +364,8 @@ export const demoDailyStats: DemoStat[] = [
   { label: 'Top weak topic', value: 'Liquidity sweeps', sub: '3 losses linked' },
   { label: 'Best asset', value: 'EUR/USD', sub: '71% win rate' },
 ];
+
+
+export { bottomTabs }
+
+export { TELEGRAM_URL }

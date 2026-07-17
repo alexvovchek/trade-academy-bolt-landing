@@ -8,6 +8,8 @@ import LiveChart from './pages/LiveChart';
 import Partners from './pages/Partners';
 import Pricing from './pages/Pricing';
 import Dashboard from './pages/Dashboard';
+import FAQ from './pages/FAQ';
+import Legal from './pages/Legal';
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="partners" element={<Partners />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="legal" element={<Legal />} />
         </Route>
       </Routes>
     </BrowserRouter>
