@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-zinc-200 font-sans antialiased;
+  background-image:
+    radial-gradient(60% 50% at 50% -10%, rgba(208, 175, 58, 0.10), transparent 60%),
+    radial-gradient(40% 40% at 100% 0%, rgba(178, 58, 64, 0.10), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(208, 175, 58, 0.3);
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0c0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2c35;
+  border-radius: 999px;
+  border: 2px solid #0c0c0f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a45;
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-gold-300;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-white/5 bg-ink-850/80 shadow-card backdrop-blur-sm;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-gold-300 to-gold-500 px-5 py-3 text-sm font-semibold text-ink-950 shadow-glow transition-all duration-300 hover:from-gold-200 hover:to-gold-400 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-zinc-100 transition-all duration-300 hover:border-gold-500/40 hover:bg-white/[0.06] hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-wine {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-wine-400/40 bg-wine-500/10 px-5 py-3 text-sm font-semibold text-wine-100 transition-all duration-300 hover:bg-wine-500/20 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1];
+  }
+
+  .gradient-text-gold {
+    background: linear-gradient(135deg, #f6ecc6 0%, #e8c456 40%, #a87f24 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-title-sm {
+    @apply font-display text-2xl font-bold tracking-tight text-white sm:text-3xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+}
